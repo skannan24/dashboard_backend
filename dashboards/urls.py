@@ -8,6 +8,6 @@ router.register('dashboards', views.DashboardsAPI)
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', admin.site.urls),
+    path('', include(router.urls)),
     path('api/', include(router.urls))
 ]
